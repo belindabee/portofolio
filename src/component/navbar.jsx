@@ -1,7 +1,7 @@
 import React from "react";
 import Background from "./background.jsx";
 import About from "./about.jsx";
-import Contact from "./contact.jsx";
+
 
 import WOW from "wowjs";
 
@@ -9,7 +9,7 @@ class Navbar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.about = React.createRef();
-		this.contact = React.createRef();
+		
 
 		this.scrolling = this.scrolling.bind(this);
 	}
@@ -87,13 +87,7 @@ class Navbar extends React.Component {
 									About
 								</a>
 								
-								<a
-									onClick={() => {
-										this.scrolling(this.contact);
-									}}
-									className="btn-style nav-item nav-link">
-									Contact
-								</a>
+								
 							</div>
 						</div>
 					</div>
@@ -109,12 +103,7 @@ class Navbar extends React.Component {
 					tada={"wow fadeIn"}
 				/>
 				/>
-				<Contact
-					ref={this.contact}
-					id="my-contact"
-					fadeInLeft={"wow fadeInLeft"}
-					shake={"wow pulse"}
-				/>
+				
 			</div>
 		);
 	}
